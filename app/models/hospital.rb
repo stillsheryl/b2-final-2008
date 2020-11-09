@@ -4,4 +4,8 @@ class Hospital < ApplicationRecord
   def doctor_count
     doctors.count
   end
+
+  def unique_universities
+    self.doctors.select(:university).order(:university).pluck(:university).uniq
+  end
 end
