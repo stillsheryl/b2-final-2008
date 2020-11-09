@@ -11,6 +11,9 @@
 
 #Doctors
 @meredith = @hopital.doctors.create!(name: "Meredith Grey", specialty: "General Surgery", university: "Harvard University")
+@alex = @hospital.doctors.create!(name: "Alex Karev", specialty: "Pediatric Surgery", university: "Johns Hopkins University")
+@miranda = @hospital.doctors.create!(name: "Miranda Bailey", specialty: "General Surgery", university: "Stanford University")
+@derek = @hospital.doctors.create!(name: "Derek McDreamy Shepherd", specialty: "Attending Surgeon", university: "Stanford University")
 
 #Patients
 @patient_1 = @meredith.patients.create!(name: "Katie Bryce", age: 24)
