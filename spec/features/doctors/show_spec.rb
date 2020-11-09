@@ -36,6 +36,9 @@ describe "Doctors Show Page" do
 
       expect(current_path).to eq("/doctors/#{@meredith.id}")
 
+      @patient_1.reload
+      visit "/doctors/#{@meredith.id}"
+
       expect(page).to_not have_content(@patient_1.name)
     end
   end
