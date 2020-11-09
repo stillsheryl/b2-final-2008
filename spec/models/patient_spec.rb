@@ -16,7 +16,7 @@ RSpec.describe Patient do
     end
 
     it ".patients_by_age" do
-      expect(Patient.patients_by_age).to eq([@patient_1, @patient_3, @patient_2])
+      expect(Patient.patients_by_age).to eq([@patient_2, @patient_3, @patient_1])
     end
   end
 end

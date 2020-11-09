@@ -14,13 +14,11 @@ describe "Patients Show Page" do
     it "shows the names of all patients listed from oldest to youngest" do
       visit "/patients"
 
-      # expect(@patient_1.name).to appear_before(@patient_3.name)
-      # expect(@patient_3.name).to appear_before(@patient_2.name)
-
-      patients = all('#patient-1, #patient-2, #patient-3');
-      expect(patients[0]['id']).to eq(@patient_1.name);
-      expect(patients[1]['id']).to eq(@patient_3.name);
-      expect(patients[2]['id']).to eq(@patient_2.name);
+      within '.patients' do
+        expect(page.all('li')[0]).to have_content(@patient_2.name)
+        expect(page.all('li')[1]).to have_content(@patient_3.name)
+        expect(page.all('li')[2]).to have_content(@patient_1.name)
+      end
     end
   end
 end
