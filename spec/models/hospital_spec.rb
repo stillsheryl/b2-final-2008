@@ -17,5 +17,9 @@ RSpec.describe Hospital do
     it "#doctor_count" do
       expect(@hospital.doctor_count).to eq(4)
     end
+
+    it "#unique_universities" do
+      expect(@hospital.unique_universities).to eq(["Harvard University", "Johns Hopkins University", "Stanford University"])
+    end
   end
 end
